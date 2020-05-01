@@ -57,8 +57,8 @@ namespace DatingApp.API
 
             // app.UseHttpsRedirection();
 
-            app.UseRouting();
-            
+            app.UseRouting();     
+
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); // For initial dev, permissive security policy.
 
             app.UseAuthentication();
