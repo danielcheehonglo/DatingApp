@@ -10,16 +10,16 @@ import {JwtHelperService} from '@auth0/angular-jwt';
 export class AppComponent implements OnInit {
   title = 'DatingApp SPA';
   jwtHelper = new JwtHelperService();
-  
-  constructor(private authService: AuthService){
+
+  constructor(private authService: AuthService) {
 
   }
 
   ngOnInit(): void {
     const token = localStorage.getItem('token');
-    if(token){
+    if (token) {
       this.authService.decodedToken = this.jwtHelper.decodeToken(token);
     }
   }
-  
+
 }
